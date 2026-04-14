@@ -280,6 +280,9 @@ export default function Home() {
             </div>
           )}
         </main>
+        <footer className={styles.footer}>
+          <p>made by Pat with love for flowers</p>
+        </footer>
       </div>
     </>
   );
