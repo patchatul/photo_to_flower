@@ -4,6 +4,9 @@ const nextConfig = {
   api: {
     bodyParser: false,
   },
+  experimental: {
+    serverComponentsExternalPackages: ['sharp'],
+  },
 }
 
 module.exports = nextConfig
