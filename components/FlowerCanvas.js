@@ -1,4 +1,4 @@
-import { useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
+import { useEffect, useRef, forwardRef } from 'react';
 
 const FlowerCanvas = forwardRef(function FlowerCanvas({ colors, animationKey, onAnimationComplete }, ref) {
   const canvasRef = useRef(null);
