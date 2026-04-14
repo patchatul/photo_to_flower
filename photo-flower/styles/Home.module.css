@@ -10,8 +10,7 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+ 
 }
 
 /* === AMBIENT ORBS === */
@@ -92,16 +91,15 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 20px 20px 20px;
 }
 .logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 5px;
 }
 .logoFlower {
-  font-size: 2.2rem;
+  font-size: 4.2rem;
   color: #f7e4a6;
   animation: rotate 20s linear infinite;
   display: inline-block;
@@ -122,20 +120,13 @@
   letter-spacing: 0.15em;
   color: #f0ebe3;
 }
-.tagline {
-  font-size: 0.82rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color:#e8e2d9;
-  font-weight: 400;
-}
 
 /* === MAIN === */
 .main {
   flex: 1;
   position: relative;
   z-index: 1;
-  padding: 0 24px 48px;
+  padding: 0 20px 20px;
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
@@ -147,7 +138,7 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .dropzone {
@@ -236,16 +227,6 @@
   font-size: 0.9rem;
   letter-spacing: 0.08em;
 }
-.sampleHint {
-  margin-top: 4px;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(200, 170, 120, 0.5);
-  border: 1px solid rgba(200, 170, 120, 0.2);
-  padding: 4px 14px;
-  border-radius: 100px;
-}
 
 .previewContainer {
   width: 100%;
@@ -327,11 +308,10 @@
 
 /* === RESULT SECTION === */
 .resultSection {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 48px;
+ display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
   align-items: start;
-  padding-top: 12px;
 }
 
 @media (max-width: 768px) {
@@ -344,7 +324,7 @@
 .resultLeft {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .photoCard {
@@ -365,7 +345,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(transparent, rgba(8, 8, 16, 0.85));
-  padding: 24px 14px 10px;
+  padding: 10px;
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -377,12 +357,11 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(230, 220, 200, 0.35);
-  margin-bottom: 12px;
 }
 .palette {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 .swatchWrapper {
   display: flex;
@@ -421,7 +400,7 @@
   background: rgba(200, 170, 120, 0.12);
   border: 1px solid rgba(200, 170, 120, 0.35);
   color: rgba(220, 195, 155, 0.95);
-  padding: 11px 20px;
+  padding: 10px 20px;
   border-radius: 10px;
   font-family: "DM Sans", sans-serif;
   font-size: 0.82rem;
@@ -462,7 +441,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 }
 .canvasGlow {
   position: absolute;
@@ -505,10 +484,10 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 20px 24px;
+  padding: 5px auto;
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(230, 220, 200, 0.2);
+  color: rgba(230, 220, 200, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }

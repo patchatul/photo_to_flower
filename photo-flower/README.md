@@ -1,5 +1,6 @@
 # 🌸 Photo to Flower Generator
-
+![alt text](image.png)
+![alt text](image-1.png)
 Transform any photograph into a unique generative flower using its dominant colors.
 
 ## ✨ Features
