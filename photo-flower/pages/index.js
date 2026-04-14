@@ -12,7 +12,7 @@ export default function Home() {
   const [preview, setPreview] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [isAnimating, setIsAnimating] = useState(false);
+ const [animationKey, setAnimationKey] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [flowerReady, setFlowerReady] = useState(false);
 
@@ -46,7 +46,7 @@ export default function Home() {
 
       const data = await res.json();
       setColors(data.colors);
-      setIsAnimating(true);
+      setAnimationKey(k => k + 1);
     } catch (e) {
       setError(e.message);
     } finally {
@@ -72,13 +72,11 @@ export default function Home() {
   };
   const handleDragLeave = () => setIsDragging(false);
 
-  const handleDownload = () => canvasRef.current?.downloadFlower();
-
   const handleReset = () => {
     setColors(null);
     setPreview(null);
     setFlowerReady(false);
-    setIsAnimating(false);
+    setAnimationKey(0);
     setError(null);
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
@@ -235,21 +233,6 @@ export default function Home() {
                 </div>
 
                 <div className={styles.actions}>
-                  <button
-                    className={styles.btnPrimary}
-                    onClick={handleDownload}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M8 11L3 6h3V2h4v4h3L8 11z" fill="currentColor" />
-                      <path
-                        d="M2 13h12"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    download flower
-                  </button>
                   <button className={styles.btnSecondary} onClick={handleReset}>
                     try another photo
                   </button>
@@ -267,14 +250,13 @@ export default function Home() {
                 <FlowerCanvas
                   ref={canvasRef}
                   colors={colors}
-                  isAnimating={isAnimating}
+                  animationKey={animationKey}
                   onAnimationComplete={() => {
-                    setIsAnimating(false);
                     setFlowerReady(true);
                   }}
                 />
                 {flowerReady && (
-                  <p className={styles.bloomText}>your flower has bloomed ✿</p>
+                  <p className={styles.bloomText}>✿ your flower has bloomed ✿</p>
                 )}
               </div>
             </div>
