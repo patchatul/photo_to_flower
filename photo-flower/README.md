@@ -8,7 +8,6 @@ Transform any photograph into a unique generative flower using its dominant colo
 - **Color Extraction** — Extracts 5 dominant colors from any uploaded image using pixel analysis with Sharp
 - **Generative Flower** — Draws a layered, animated flower on HTML Canvas using the extracted palette
 - **Bloom Animation** — Petals unfold with an eased cubic animation (1.8s)
-- **Download** — Save your flower as a PNG
 
 ## 🛠 Tech Stack
 
@@ -78,7 +77,6 @@ photo-flower/
    - **Center** with radial gradient and seed dots
    - **Pollen sparkles** that appear after bloom
 4. Petals animate open with `ease-out-cubic` over 1.8s
-5. User can download the canvas as a PNG
 
 ## 📝 Notes
 
